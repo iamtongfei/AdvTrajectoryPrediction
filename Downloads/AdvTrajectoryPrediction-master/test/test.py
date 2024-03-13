@@ -17,13 +17,12 @@ from test_utils import *
 from config import datasets, models
 
 
-for dataset_name in datasets:
-    #modify/change by guo
-    path = "/Users/tongfeiguo/Downloads/AdvTrajectoryPrediction-master/test/data/dataset/apolloscape/multi_frame/samples.txt"
-    samples_file = os.path.join(datasets[dataset_name]["data_dir"], "samples.txt")
-    with open(samples_file, 'r') as f:
-        lines = f.readlines()
-    datasets[dataset_name]["samples"] = [(int(line.split(' ')[0]), int(line.split(' ')[1])) for line in lines]
+# for dataset_name in datasets:
+#     samples_file = os.path.join(datasets[dataset_name]["data_dir"], "samples.txt")
+#     print(os.path)
+#     with open(samples_file, 'r') as f:
+#         lines = f.readlines()
+#     datasets[dataset_name]["samples"] = [(int(line.split(' ')[0]), int(line.split(' ')[1])) for line in lines]
 
 
 def load_model(model_name, dataset_name, augment=False, smooth=0, models=models):

@@ -10,11 +10,13 @@ import numpy as np
 import logging
 import copy
 from datetime import datetime
-
+#modiy/change by guo
+#from .dataloader import GRIPDataLoader
 from .dataloader import GRIPDataLoader
+#modiy/change by guo
 from prediction.model.base.interface import Interface
-from model import Model
-from main import my_load_model, compute_RMSE, display_result
+from .model import Model
+from .main import my_load_model, compute_RMSE, display_result
 
 logger = logging.getLogger(__name__)
 

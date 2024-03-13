@@ -6,7 +6,8 @@ import random
 import torch
 from scipy import spatial 
 from prediction.model.base.dataloader import DataLoader
-from layers import Graph
+#modify/change by guo
+#from layers.graph import Graph
 import numpy as np
 from prediction.model.utils import detect_tensor, smooth_tensor
 
@@ -16,7 +17,9 @@ class GRIPDataLoader(DataLoader):
         super().__init__(obs_length, pred_length)
         self.max_num_object = graph_args["num_node"]
         self.neighbor_distance = 10
-        self.graph = Graph(**graph_args)
+        #modify/change by guo
+        self.graph = None
+        #Graph(**graph_args)
         self.dev = 'cuda:0' 
         self.dataset = dataset
 

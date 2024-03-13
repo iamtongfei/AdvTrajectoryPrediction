@@ -1,3 +1,4 @@
+__name__ = 'DataLoader'
 class DataLoader:
     def __init__(self, obs_length, pred_length):
         self.seq_length = obs_length + pred_length
