@@ -34,6 +34,7 @@ def interpolation(trace, inject_num=3):
             extended_trace[i,:] = (trace[end_index,:] - trace[start_index,:]) / (inject_num + 1) * (i - start_index * (inject_num + 1)) + trace[start_index,:]
     return extended_trace
 
+//The purpose of the interpolation function is to extend a given trajectory by adding additional points between existing points. This process of interpolation is commonly used in trajectory prediction and modeling to increase the temporal resolution of trajectories or to generate smoother trajectories.
 
 def square_distance(point1, point2):
     return torch.sum(torch.square(point1 - point2))
