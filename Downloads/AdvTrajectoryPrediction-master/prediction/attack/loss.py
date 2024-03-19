@@ -77,7 +77,7 @@ def vertical_distance(observe_trace, predict_trace, future_trace):
     average_distance = torch.sum(offset * (direction.t().float() / scale).t()) / predict_trace.shape[0]
     return average_distance
 
-
+//**attack_opts in a function parameter list indicates that the function accepts a variable number of keyword arguments, which are then collected into a dictionary named attack_opts
 def attack_loss(observe_traces, future_traces, predict_traces, obj_id, perturbation, **attack_opts):
     if "perturbation_cost_c" not in attack_opts:
         attack_opts["perturbation_cost_c"] = 0.1
